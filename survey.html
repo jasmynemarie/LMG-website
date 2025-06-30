@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <main>
+      <h1 id="title">LMG Survey Form</h1><!--Center with CSS-->
+      <p id="description">Thank you for attending our recent event! Please complete the survey below to tell us a bit about yourself and your experience.</p>
+      <p>Required fields are followed by a <strong>*</strong>.</p>
+      
+      <form id="survey-form">
+        <fieldset>
+          <legend>Personal Information</legend>
+        <p>
+          <label for="name" id="name-label">Name: <strong><span aria-label="required">*</span></strong></label>
+          <input type="text" id="name" name="user_name" placeholder ="e.g. John Doe" required>
+        </p>
+        <p>
+          <label for="email" id="email-label">Email: <strong><span aria-label="required">*</span></strong></label>
+          <input type="email" id="email" name="user_email" placeholder="example@email.com" required>
+        </p>
+        <p>
+          <label for="age" id="number-label">Age (optional): </label>
+          <input type="number" id="number" name="user_age" min="0" max="100" placeholder="Your age">
+        </p>
+        </fieldset>
+        
+      <br>
+        
+        <fieldset>
+          <legend>Which event(s) did you attend? (check all that apply)</legend>
+            <input type="checkbox" id="rep-7" name="rep-7" value="rep-7">
+            <label for="rep-7" id="rep-7">Reparations-7</label><br>
+            <input type="checkbox" id="fundraiser" name="fundraiser" value="fundraiser">
+            <label for="fundraiser" id="fundraiser">Fundraiser</label><br>
+            <input type="checkbox" id="ed-initiative" name="ed-initiative" value="ed-initiative">
+            <label for="ed-initiative" id="ed-initiative">Education Initiative</label><br>
+            <input type="checkbox" id="imm-initiative" name="imm-initiative" value="imm-initiative">
+            <label for="imm-initiative" id="imm-initiative">Immigration Initiative</label><br>
+            <input type="checkbox" id="journalism-workshop" name="journalism-workshop" value="journalism-workshop">
+            <label for="journalism-workshop" id="journalism-workshop">Independent Journalism Workshop</label>
+        </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Rate your overall experience</legend>
+
+        <label for="informative">How informative was the event?</label>
+            <select name="informative" id="dropdown">
+              <option value="not-at-all">Not at all</option>
+              <option value="somewhat">Somewhat</option>
+              <option value="very">Very</option>
+              <option selected value="extremely">Extremely</option>
+            </select>
+
+        <br><br>
+
+        <label for="reattend">Would you attend another LMG event?</label><br>
+            <input id="yes-option" type="radio" name="reattend" value="yes">
+            <label for="yes-option">Yes</label>
+            <input id="no-option" type="radio" name="reattend" value="no">
+            <label for="no-option">No</label>
+            <input id="not-sure-option" type="radio" name="reattend" value="not-sure">
+            <label for="not-sure-option">Not Sure</label>
+      </fieldset>
+
+        <br>
+
+      <fieldset>
+        <legend for="comments">Other Feedback?</legend>
+        <textarea cols="30" rows="10" name="comments" id="comments" placeholder="Enter your feedback here..."></textarea>
+      </fieldset>
+
+        <br>
+
+    <input type="submit" id="submit" value="Submit Survey">
+      </form>
+    </main>
+  </body>
+</html>

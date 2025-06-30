@@ -1,0 +1,334 @@
+/* Basic Resets & Body Styling */
+body {
+    font-family: Arial, sans-serif; /* A readable font */
+    margin: 0; /* Remove default body margin */
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* Dark gray text */
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Top Navigation Styling */
+.topnav {
+    background-color: #333; /* Dark background */
+    overflow: hidden; /* Clear floats */
+    padding: 10px 0;
+    text-align: center; /* Center the links if they are inline */
+    display: flex; /* Makes .topnav a flex container */
+    align-items: center; /* Vertically centers direct children (logo and nav links) */
+    justify-content: center; /* Horizontally centers children - if you want them in the middle */
+    /* If you want links to be left-aligned, use justify-content: flex-start;
+       If you want space between them, use justify-content: space-between; etc. */
+}
+
+.topnav a {
+    color: #f2f2f2; /* Light text color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /* Remove underline */
+    font-size: 17px;
+    margin: 0 5px; /* Spacing between links */
+}
+
+.topnav a:hover {
+    background-color: transparent; /* Light background on hover */
+    color: black;
+}
+
+/* Company Logo Styling */
+/* Styling for the <a> tag (the link wrapper for the logo) */
+.logo-link {
+    margin-right: 15px; /* Adds space to the right of the logo link */
+    /* Remove height: 50px; and width: auto; from here! */
+}
+
+.logo-link:hover,
+.logo-link:focus {
+    outline-color: black; /* Choose your desired color, e.g., a blue */
+    outline-width: 2px;    /* Choose your desired thickness, e.g., 1px, 2px */
+    outline-style: solid;  /* Keep it solid, or try dashed, dotted */
+}
+
+/* Styling for the <img> tag (the actual logo image) */
+.company-logo {
+    height: 100px; /* Apply the height to the image itself */
+    width: auto;  /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Adjust the .topnav a if needed to account for logo spacing */
+.topnav a {
+    /* ... existing styles ... */
+    /* If you set height: 50px on the image, line-height: 50px here can help vertical align other nav text */
+    line-height: 50px;
+}
+
+/* Basic Content Area Styling */
+.container { /* You might want to wrap your main content in a div with this class */
+    width: 80%; /* Set a width for your content */
+    margin: 20px auto; /* Center the content with some top/bottom margin */
+    padding: 20px;
+    background-color: #fff; /* White background for content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Styling for Headings */
+h1, h2, h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+/* Styling for Quotes */
+q {
+    font-style: italic;
+}
+
+/* Styling for donation icons */
+.donation-icon {
+    display: block;
+    padding-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
+}
+
+/* Styling for donation images and links */
+.donation-campaign {
+    border: 3px solid #928559;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.donation-link {
+    border: 3px solid #928559;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.donation-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+}
+
+.logo-donation-image {
+    display: block;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+}
+
+.donation-campaign a {
+    color: #11802b;
+    text-decoration: none;
+}
+
+.donation-campaign a:hover {
+    color: #647944;
+    text-decoration: none;
+}
+
+.donation-link a {
+    color: #11802b;
+    text-decoration: none;
+}
+
+.donation-link a:hover {
+    color: #647944;
+    text-decoration: none;
+}
+
+.donation-notice {
+    text-align: center;
+}
+
+/* Styling for kit image(s) */
+.kit-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Styling for featured image(s) */
+.featured-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input[type="text"],
+form input[type="email"],
+#age {
+    width: 24ch; /* Adjust this pixel value as needed */
+    /* You might also add padding if you want more internal space */
+    padding: 8px 10px; /* Example: adds a little more room inside the field */
+}
+form textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+form button:hover {
+    background-color: #0056b3;
+}
+#contact-message, #subscribe-message { /* Style your message divs */
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Example: Success messages in green */
+#contact-message.success, #subscribe-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+/* Example: Error messages in red */
+#contact-message.error, #subscribe-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #f2f2f2; /* Light text color */
+    padding: 40px 20px; /* Top/bottom padding and left/right padding */
+    font-size: 0.9em; /* Slightly smaller font size */
+}
+
+.footer-content {
+    display: flex; /* Makes footer sections arrange horizontally */
+    flex-wrap: wrap; /* Allows sections to wrap onto the next line on smaller screens */
+    justify-content: space-around; /* Distributes space between sections */
+    max-width: 1200px; /* Max width for your footer content */
+    margin: 0 auto; /* Center the footer content */
+    gap: 30px; /* Space between flex items/sections */
+    margin-bottom: 20px; /* Space above copyright bar */
+}
+
+.footer-section {
+    flex: 1; /* Allows sections to grow and shrink */
+    min-width: 180px; /* Minimum width before wrapping */
+    margin-bottom: 20px; /* Space for when items stack on smaller screens */
+}
+
+.footer-section h3 {
+    color: #647944; /* An olive color for section titles */
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.footer-section ul {
+    list-style: none; /* Remove bullet points from lists */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #f2f2f2; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-section ul li a:hover {
+    background-color: transparent;
+    color: black; /* Hover color for links */
+}
+
+.footer-contact a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:active {
+    color: #f2f2f2;
+}
+
+.footer-contact a:visited {
+    color: #928559;
+}
+
+
+/* Social Icons Styling */
+.footer-social ul {
+    display: flex; /* Arrange social icons horizontally */
+    gap: 15px; /* Space between icons */
+}
+
+.footer-social img {
+    width: 20px; /* Size of social icons */
+    height: 20px;
+    vertical-align: middle; /* Align icon with text if you add any */
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+    text-align: center; /* Center the copyright text */
+    padding-top: 20px;
+    border-top: 1px solid #444; /* A subtle line above the copyright */
+    color: #aaa; /* Slightly lighter color for copyright text */
+    font-size: 0.8em;
+}

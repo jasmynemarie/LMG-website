@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Lineage Media Group - Subscribe</title>
+    <link rel="icon" type="image/png" href="/LMG-favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+</head>
+
+<body>
+    <header> <div class="topnav">            
+                <a href="index.html" class="logo-link">
+                    <img src="/LMG-logo.png" alt="Lineage Media Group Logo" class="company-logo"></a>
+                <a class="active" href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="initiatives.html">Initiatives</a>
+                <a href="contact.html">Contact</a>
+                <a href="subscribe.html">Subscribe</a>
+                <a href="donate.html">Donate</a>
+            </div>
+    </header>
+    
+    <div class="container">
+        <h1>Subscribe to our Mailing List</h1>
+
+        <form id="subscription-form">
+            <fieldset>
+                <legend><h2>Mailing List Subscription Form</h2></legend>
+                <h3 id="description">Stay connected with the movement! Join our mailing list below:</h3>
+                <p>Required fields are followed by <strong>*</strong>.</p>
+                <p>
+                    <label for="firstName">First name: <strong><span aria-label="required">*</span></strong></label>
+                    <input type="text" id="firstName" name="firstname" required autofocus><br>
+                </p>
+                <p>
+                    <label for="lastName">Last name: <strong><span aria-label="required">*</span></strong></label>
+                    <input type="text" id="lastName" name="lastname"><br>
+                </p>
+                <p>
+                    <label for="age">Age: <strong><span aria-label="required">*</span></strong></label>
+                    <input type="number" id="age" name="age" min="16" max="100" placeholder="must be at least 16 to join" required><br>
+                </p>
+                <p>  
+                    <label for="email">E-mail: <strong><span aria-label="required">*</span></strong></label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required><br>
+                </p>
+                <p>By clicking "Submit", you acknowledge and agree to our <a href="terms-of-service.html" target="_blank">Terms of Service</a> and our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.</p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </fieldset>
+            <div id="form-message"></div>
+        </form>
+    </div>
+
+    <script src="script.js" defer></script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section footer-social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://twitter.com/@LMG360" target="_blank" aria-label="X (formerly Twitter)"><img src="x-icon.png" alt="X (Twitter)"></a></li>
+                </ul>
+            </div>
+
+        <div class="footer-section footer-nav">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="initiatives.html">Initiatives</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="subscribe.html">Subscribe</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section footer-contact">
+            <h3>Get In Touch</h3>
+            <p>Email: <a href="mailto:lingeagemediagroup360@gmail.com">lingeagemediagroup360@gmail.com</a></p>
+            <p>Phone: <a href="tel:7025920561">(702) 592-0561</a></p>
+            <p><a href="contact.html">More Contact Options</a></p>
+        </div>
+
+        <div class="footer-section footer-legal">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Lineage Media Group. All rights reserved.</p>
+    </div>
+    </footer>
+
+</body>
+</html>
