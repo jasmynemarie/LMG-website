@@ -45,3 +45,16 @@ form.addEventListener('submit', e => {
         console.error('Error!', error.message);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.navbar-links');
+
+    // Check if both elements exist to prevent errors if not found
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active'); // Toggles the 'active' class on navbar-links
+            hamburger.classList.toggle('is-active'); // Optional: Toggles 'is-active' for hamburger animation
+        });
+    }
+});

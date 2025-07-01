@@ -35,6 +35,34 @@ body {
     color: black;
 }
 
+/* --- NEW: Desktop adjustment for logo positioning --- */
+/* This pushes the logo to the left, and the upcoming navbar-links to the right */
+/* Place this rule somewhere below your existing .topnav styles */
+.topnav .logo-link {
+    margin-right: auto;
+}
+
+/* --- NEW: Hamburger Icon Styles (Hidden by default on Desktop) --- */
+/* Place these rules below your existing desktop navigation styles */
+.hamburger {
+    display: none; /* Hidden on desktop by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 20px; /* Space from logo */
+    z-index: 1001; /* Ensure it's above other content if menu overlays */
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #f2f2f2;
+    transition: all 0.3s ease-in-out; /* Smooth transition for animation */
+}
+
 /* Company Logo Styling */
 /* Styling for the <a> tag (the link wrapper for the logo) */
 .logo-link {
@@ -338,4 +366,79 @@ footer {
     border-top: 1px solid #444; /* A subtle line above the copyright */
     color: #aaa; /* Slightly lighter color for copyright text */
     font-size: 0.8em;
+}
+
+/* --- NEW: Mobile Specific Styles (Using a Media Query) --- */
+@media (max-width: 768px) { /* Adjust breakpoint as needed, 768px is common for tablets/phones */
+    .topnav {
+        flex-wrap: wrap; /* Allow items to wrap if needed */
+        /* You have justify-content: center; in your existing .topnav.
+           If you want the logo and hamburger to be on opposite ends of the top row,
+           you might want to override with justify-content: space-between; here for mobile.
+           For now, let's keep it simple. */
+        align-items: center; /* Keep centered vertical alignment */
+        padding: 10px; /* Adjust padding for mobile */
+        position: relative; /* For absolute positioning of the menu */
+    }
+
+    /* Adjust logo link's margin on mobile if needed. Auto margin might push it too far */
+    .topnav .logo-link {
+        margin-right: 0; /* Reset margin from desktop, if it's causing issues */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        /* If you want the hamburger to be on the far right on mobile,
+           you might need to adjust .topnav's justify-content above,
+           or add margin-left: auto; to .hamburger itself for mobile */
+    }
+
+    .navbar-links {
+        /* Mobile menu container style */
+        display: none; /* HIDDEN by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Take full width of the topnav */
+        position: absolute; /* Position relative to .topnav */
+        top: 100%; /* Position below the header/topnav */
+        left: 0;
+        background-color: #333; /* Use your existing nav background color */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Optional subtle shadow */
+        z-index: 1000; /* Ensure menu is above page content */
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show the menu when the 'active' class is added by JS */
+    }
+
+    .topnav .navbar-links a {
+        /* Styles for individual links WITHIN the mobile menu */
+        text-align: center; /* Center the links in the mobile menu */
+        padding: 12px 15px; /* More padding for easier tapping */
+        width: 100%; /* Make links full width of the menu */
+        border-bottom: 1px solid #555; /* Optional: separator between links, adjust color */
+        color: #f2f2f2; /* Use your existing link color */
+        background-color: transparent; /* Ensure no background on hover initially */
+    }
+
+    .topnav .navbar-links a:hover {
+        background-color: #555; /* Adjust hover background for mobile menu */
+        color: #f2f2f2; /* Keep text color same or change */
+    }
+
+    .topnav .navbar-links a:last-child {
+        border-bottom: none; /* No border for the last link */
+    }
+
+    /* Optional: Hamburger animation when active */
+    .hamburger.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
