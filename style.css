@@ -376,6 +376,7 @@ footer {
         align-items: center; /* Keep centered vertical alignment */
         padding: 10px; /* Adjust padding for mobile */
         position: relative; /* For absolute positioning of the menu */
+        overflow: visible;
     }
 
     /* Adjust logo link's margin on mobile if needed. Auto margin might push it too far */
