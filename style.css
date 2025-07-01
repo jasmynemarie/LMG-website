@@ -47,12 +47,7 @@ body {
     color: black;
 }
 
-/* --- NEW: Desktop adjustment for logo positioning --- */
-/* This pushes the logo to the left, and the upcoming navbar-links to the right */
-/* Place this rule somewhere below your existing .topnav styles */
-.topnav .logo-link {
-    margin-right: auto;
-}
+
 
 /* --- NEW: Hamburger Icon Styles (Hidden by default on Desktop) --- */
 /* Place these rules below your existing desktop navigation styles */
@@ -393,7 +388,7 @@ footer {
 
     /* Adjust logo link's margin on mobile if needed. Auto margin might push it too far */
     .topnav .logo-link {
-        margin-right: 0; /* Reset margin from desktop, if it's causing issues */
+        margin-right: auto; /* Reset margin from desktop, if it's causing issues */
     }
 
     .hamburger {
