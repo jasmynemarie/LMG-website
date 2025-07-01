@@ -1,3 +1,15 @@
+/* Global Reset for better consistency and to prevent horizontal scroll issues */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll for the entire page */
+}
+
+/* Ensure padding and borders are included in element's total width/height */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Basic Resets & Body Styling */
 body {
     font-family: Arial, sans-serif; /* A readable font */
@@ -395,10 +407,13 @@ footer {
         /* Mobile menu container style */
         display: none; /* HIDDEN by default on mobile */
         flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Take full width of the topnav */
+        width: auto; /* Take full width of the topnav */
+        margin-left: 0;
+        margin-right: 0;
         position: absolute; /* Position relative to .topnav */
         top: 100%; /* Position below the header/topnav */
         left: 0;
+        right: 0;
         background-color: #333; /* Use your existing nav background color */
         box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Optional subtle shadow */
         z-index: 1000; /* Ensure menu is above page content */
