@@ -372,10 +372,7 @@ footer {
 @media (max-width: 768px) { /* Adjust breakpoint as needed, 768px is common for tablets/phones */
     .topnav {
         flex-wrap: wrap; /* Allow items to wrap if needed */
-        /* You have justify-content: center; in your existing .topnav.
-           If you want the logo and hamburger to be on opposite ends of the top row,
-           you might want to override with justify-content: space-between; here for mobile.
-           For now, let's keep it simple. */
+        justify-content: space-between;
         align-items: center; /* Keep centered vertical alignment */
         padding: 10px; /* Adjust padding for mobile */
         position: relative; /* For absolute positioning of the menu */
