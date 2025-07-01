@@ -73,6 +73,13 @@ body {
     border-radius: 8px; /* Slightly rounded corners */
 }
 
+/* Styling for general images */
+img {
+    max-width: 100%; /* Ensures images never exceed their parent container's width */
+    height: auto;    /* Maintains the image's aspect ratio */
+    display: block;  /* Optional: removes extra space below images if they are inline */
+}
+
 /* Styling for Headings */
 h1, h2, h3 {
     color: #333;
