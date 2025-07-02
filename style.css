@@ -47,8 +47,6 @@ body {
     color: black;
 }
 
-
-
 /* --- NEW: Hamburger Icon Styles (Hidden by default on Desktop) --- */
 /* Place these rules below your existing desktop navigation styles */
 .hamburger {
@@ -216,6 +214,17 @@ q {
     padding-bottom: 20px;
 }
 
+/* Styling for pilot image(s) */
+.pilot-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 /* Styling for featured image(s) */
 .featured-image {
     display: block;
@@ -243,7 +252,7 @@ form label {
 form input[type="text"],
 form input[type="email"],
 #age {
-    width: 24ch; /* Adjust this pixel value as needed */
+    width: 28ch; /* Adjust this pixel value as needed */
     /* You might also add padding if you want more internal space */
     padding: 8px 10px; /* Example: adds a little more room inside the field */
 }
