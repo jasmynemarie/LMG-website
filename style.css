@@ -132,6 +132,12 @@ q {
     font-style: italic;
 }
 
+/* Styling for Abbreviations */
+abbr {
+    cursor: pointer;
+    text-underline-offset: 0.2em;
+}
+
 /* Styling for donation icons */
 .donation-icon {
     display: block;

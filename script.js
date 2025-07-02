@@ -54,3 +54,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+    // --- NEW CODE FOR ABBR TAG ---
+    const abbrElements = document.querySelectorAll('abbr');
+
+    abbrElements.forEach(abbr => {
+        // Add a touchstart listener to prevent default browser behavior on tap
+        // The { passive: false } option is crucial here to allow preventDefault()
+        abbr.addEventListener('touchstart', (event) => {
+            // Stop the browser from opening a search window or doing other default actions
+            event.preventDefault();
+
+            // Optional: You could add a console log here for debugging if needed:
+            // console.log('Abbreviation tapped:', abbr.title);
+
+            // If you later want to implement a custom visual tooltip on tap,
+            // this is where you would trigger its display.
+            // For now, it just prevents the Google search.
+
+        }, { passive: false }); // IMPORTANT: passive: false is needed for preventDefault() to work on touch events
+    });
+});
